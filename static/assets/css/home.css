@@ -1,0 +1,8 @@
+.headericon:hover {
+  color: #5F30E2;
+  transition: 0.5s;
+}
+
+.headericon {
+  color: #999;
+}
