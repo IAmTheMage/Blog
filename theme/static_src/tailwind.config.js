@@ -45,8 +45,14 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                "base-color-light": "#300d4f",
-                "special-color-light": "#5F30E2"
+                "bg": "#17171F",
+                "base-color-light": "#ffffff",
+                "special-color-light": "#9C57F5",
+                "special-color-hover": "#6d3cab",
+                "special-color-focus": "#c39af9"
+            },
+            fontFamily: {
+                custom: ['Poppins']
             }
         },
     },

@@ -4,5 +4,16 @@
 }
 
 .headericon {
-  color: #999;
+  color: #fff;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/static/assets/fonts/Poppins/Poppins-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: Poppins;
 }

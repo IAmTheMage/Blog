@@ -1,0 +1,42 @@
+<header>
+  <nav class="container flex justify-between items-center py-4 px-8 border-b border-bg">
+    <div class="py-1 flex items-center">
+      <i style="color: #fff;" class=" text-5xl fa-solid fa-hat-wizard"></i>
+      <h1 class="sm:text-base text-2xl ml-3 text-base-color-light">Blog do Mago</h1>
+    </div>
+    <ul class="md:flex text-xl hidden gap-10 items-center">
+      {% for item in header %}
+        <li class="hover:text-special-color-light 
+        text-base-color-light cursor-pointer
+        ">{{item.value}}</li>
+      {% endfor %}
+      <li class="cursor-pointer">
+        <button type="button" class="text-white bg-special-color-light
+        hover:bg-special-color-hover focus:ring-4 focus:bg-special-color-focus 
+        font-medium rounded-lg text-sm px-5 py-2.5 
+        text-center dark:bg-blue-600 
+        dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+          Contato
+        </button>
+      </li>
+      <li class="cursor-pointer">
+        <a target="_blank" href="https://github.com/IAmTheMage">
+          <i class="headericon fa-brands fa-github"></i>
+        </a>
+      </li>
+      <li class="cursor-pointer">
+        <a target="_blank" href="https://www.instagram.com/01gustavogoncalves/">
+          <i class="headericon fa-brands fa-instagram"></i>
+        </a>
+      </li>
+      <li class="cursor-pointer">
+        <a target="_blank" href="https://github.com/IAmTheMage">
+          <i class="headericon fa-brands fa-twitter"></i>
+        </a>
+      </li>
+    </ul>
+    <div class="text-base-color-light text-xl flex lg:hidden flex-1 justify-end">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </nav>
+</header>

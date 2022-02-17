@@ -5,7 +5,7 @@
       <h1 class="text-2xl ml-3 text-special-color-light">Blog do Mago</h1>
     </div>
     
-    <ul class="flex flex-1 justify-end items-center gap-5 
+    <ul class="hidden sm:flex flex-1 justify-end items-center gap-5 
     text-base-color-light text-2xl">
     {% for post in header %}
       <li class="cursor-pointer">{{post.value}}</li>
@@ -26,5 +26,8 @@
         </a>
       </li>
     </ul>
+    <div class="flex lg:hidden flex-1 justify-end">
+      <i class="fa-solid fa-bars"></i>
+    </div>
   </nav>
 </header>
