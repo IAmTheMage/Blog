@@ -1,0 +1,52 @@
+.menuline
+{
+  display: block;
+  background-color: white;
+  width: 28px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  margin-left: 75%;
+  background: #fff;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+.menuline:first-child
+{
+  transform-origin: 0% 0%;
+  background-color: white;
+}
+
+.menuline:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+  background-color: white;
+}
+
+.menulineclicked {
+  transform: rotate(45deg) translate(-2px, -14px);
+}
+
+.menulineclicked:nth-last-child(2)
+{
+  opacity: 1;
+  transform: rotate(-45deg) translate(-3px, 16px);
+  background: white;
+}
+
+.menulineclicked:nth-last-child(3)
+{
+  opacity: 0;
+}
+
+#mobilenavbar {
+  transition: transform 0.5s, opacity 0.5s
+}

@@ -12,6 +12,13 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 import os
+import mimetypes
+from threading import local
+
+import django
+import django_heroku
+
+mimetypes.add_type("text/css", ".css", True)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,8 +34,9 @@ SECRET_KEY = 'django-insecure-nwxqw4y*3g7(if!ic0e24^)h6gfbxfc)w$_u(mkrgx55%_#v0_
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '808f-186-227-70-220.ngrok.io',
-    'localhost'
+    '366e-186-227-70-220.ngrok.io',
+    'localhost',
+    '127.0.0.1'
 ]
 
 
@@ -47,6 +55,7 @@ INSTALLED_APPS = [
     'theme',
     'django_browser_reload',
     'fontawesomefree',
+    'contact'
 ]
 
 MIDDLEWARE = [
@@ -65,7 +74,9 @@ ROOT_URLCONF = 'blog.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -130,6 +141,7 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
     os.path.join(BASE_DIR, "theme", "static"),
+    os.path.join(BASE_DIR, 'core', 'templates', 'css')
 ]
 
 # Default primary key field type
@@ -144,3 +156,5 @@ INTERNAL_IPS = [
 TAILWIND_APP_NAME = 'theme'
 
 NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
+
+django_heroku.settings(locals())

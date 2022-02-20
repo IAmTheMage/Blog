@@ -14,11 +14,15 @@
 	<body class="bg-bg">
 		{% include "sitealpha.html" %}
 		{% include 'navbarbase.html' %}
-		<p style="color: white">Hello core</p>
+    {% block content %}
+    {% endblock %}
 	</body>
 	<script>
 	</script>
 	<script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="{% static 'assets/javascript/navbar.js' %}"></script>
 	<script type="text/javascript" src="/static/assets/javascript/region.js"></script>
+  {% for script in additional_scripts %}
+    <script type="text/javascript" src="{{aditional_scripts.src}}"></script>
+  {% endfor %}
 </html>

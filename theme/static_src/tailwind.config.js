@@ -51,9 +51,6 @@ module.exports = {
                 "special-color-hover": "#6d3cab",
                 "special-color-focus": "#c39af9"
             },
-            fontFamily: {
-                custom: ['Poppins']
-            }
         },
     },
     plugins: [
