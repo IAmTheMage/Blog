@@ -46,6 +46,8 @@ module.exports = {
         extend: {
             colors: {
                 "bg": "#17171F",
+                "form-color": "#2e2e35",
+                "input-bg": "#14141b",
                 "base-color-light": "#ffffff",
                 "special-color-light": "#9C57F5",
                 "special-color-hover": "#6d3cab",

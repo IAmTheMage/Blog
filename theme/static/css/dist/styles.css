@@ -705,6 +705,11 @@ select {
   margin-right: auto;
 }
 
+.my-6 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
 .ml-3 {
   margin-left: 0.75rem;
 }
@@ -757,6 +762,10 @@ select {
   margin-top: 1.5rem;
 }
 
+.ml-14 {
+  margin-left: 3.5rem;
+}
+
 .block {
   display: block;
 }
@@ -795,6 +804,18 @@ select {
 
 .h-12 {
   height: 3rem;
+}
+
+.w-\[60\%\] {
+  width: 60%;
+}
+
+.w-\[70\%\] {
+  width: 70%;
+}
+
+.w-\[80\%\] {
+  width: 80%;
 }
 
 .w-full {
@@ -913,6 +934,10 @@ select {
   border-radius: 0.25rem;
 }
 
+.rounded-sm {
+  border-radius: 0.125rem;
+}
+
 .border {
   border-width: 1px;
 }
@@ -931,6 +956,10 @@ select {
 
 .border-b-2 {
   border-bottom-width: 2px;
+}
+
+.border-r-2 {
+  border-right-width: 2px;
 }
 
 .border-bg {
@@ -957,14 +986,23 @@ select {
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
 }
 
-.bg-bg {
+.bg-form-color {
   --tw-bg-opacity: 1;
-  background-color: rgb(23 23 31 / var(--tw-bg-opacity));
+  background-color: rgb(46 46 53 / var(--tw-bg-opacity));
+}
+
+.bg-transparent {
+  background-color: transparent;
 }
 
 .bg-special-color-light {
   --tw-bg-opacity: 1;
   background-color: rgb(156 87 245 / var(--tw-bg-opacity));
+}
+
+.bg-bg {
+  --tw-bg-opacity: 1;
+  background-color: rgb(23 23 31 / var(--tw-bg-opacity));
 }
 
 .bg-base-color-light {
@@ -992,6 +1030,44 @@ select {
   background-color: rgb(29 78 216 / var(--tw-bg-opacity));
 }
 
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-input-bg {
+  --tw-bg-opacity: 1;
+  background-color: rgb(20 20 27 / var(--tw-bg-opacity));
+}
+
+.p-10 {
+  padding: 2.5rem;
+}
+
+.p-14 {
+  padding: 3.5rem;
+}
+
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -1017,11 +1093,6 @@ select {
   padding-bottom: 0.625rem;
 }
 
-.py-2 {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
 .px-14 {
   padding-left: 3.5rem;
   padding-right: 3.5rem;
@@ -1030,11 +1101,6 @@ select {
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-}
-
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 
 .px-6 {
@@ -1055,6 +1121,11 @@ select {
 .px-0 {
   padding-left: 0px;
   padding-right: 0px;
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 
 .text-center {
@@ -1125,12 +1196,12 @@ select {
   letter-spacing: 0em;
 }
 
-.text-base-color-light {
+.text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.text-white {
+.text-base-color-light {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
@@ -1168,6 +1239,11 @@ select {
 .text-gray-500 {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+
+.text-gray-200 {
+  --tw-text-opacity: 1;
+  color: rgb(229 231 235 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -1215,6 +1291,11 @@ select {
 .focus\:bg-special-color-focus:focus {
   --tw-bg-opacity: 1;
   background-color: rgb(195 154 249 / var(--tw-bg-opacity));
+}
+
+.focus\:text-special-color-light:focus {
+  --tw-text-opacity: 1;
+  color: rgb(156 87 245 / var(--tw-text-opacity));
 }
 
 .focus\:ring-4:focus {
