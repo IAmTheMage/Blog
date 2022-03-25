@@ -2,13 +2,27 @@
 {% block content %}
   <div class="flex flex-col items-center">
     <h1 class="text-white my-6 text-2xl ">Contato</h1>
-    <form class="flex bg-form-color py-6 px-4 w-[60%] flex-col items-center">
+    <form method="post" action="/contact/mail" class="flex bg-form-color rounded py-6 px-4 w-[60%] flex-col items-center">{% csrf_token %}
       <div style="border-radius: 5px;" class="bg-input-bg 
-      text-gray-200 py-3 w-[70%] 
+      text-gray-200 py-3 w-[70%] mb-4
       items-center focus:text-special-color-light">
         <i class="fa-solid fa-user ml-3 text-base"></i>
-        <input class="bg-transparent text-white text-base px-3 w-[80%]" placeholder="Nome" />
+        <input name="name" class="bg-transparent text-white text-base px-3 w-[80%]" placeholder="Nome" />
       </div>
+      <div style="border-radius: 5px;" class="bg-input-bg 
+      text-gray-200 py-3 w-[70%] mb-4
+      items-center focus:text-special-color-light">
+        <i class="fa-solid fa-envelope ml-3 text-base"></i>
+        <input name='email' class="bg-transparent text-white text-base px-3 w-[80%]" placeholder="Email" />
+      </div>
+      <div style="border-radius: 5px;" class="bg-input-bg 
+      text-gray-200 py-3 w-[70%] mb-4
+      items-center focus:text-special-color-light">
+        <i class="fa-solid fa-hashtag ml-3 text-base"></i>
+        <input name='subject' class="bg-transparent text-white text-base px-3 w-[80%]" placeholder="Assunto" />
+      </div>
+      <textarea name="content" class="w-[70%] text-white bg-input-bg border-transparent rounded-sm"></textarea>
+      <button type="submit" class="w-[70%] bg-special-color-light rounded-md mt-6 py-2 px-2 text-white hover:bg-special-color-hover">Enviar</button>
     </form>
   </div>
 {% endblock %}

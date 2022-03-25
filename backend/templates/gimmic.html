@@ -1,0 +1,53 @@
+{% extends "structure.html" %}
+
+{% block content %}
+  <div class="container-editor">
+    <div class="contentContainer-editor">
+      <div class="creation">
+        <i id="bold" color="white" class="fa-solid fa-b"></i>
+        <i id="italic" color="white" class="fa-solid fa-italic"></i>
+        <i id="underline" color="white" class="fa-solid fa-underline"></i>
+        <i id="alignCenter" color="white" class="fa-solid fa-align-center"></i>
+        <i id="alignRight" color="white" class="fa-solid fa-align-right"></i>
+        <i id="alignLeft" color="white" class="fa-solid fa-align-left"></i>
+        <i id="alignJustify" color="white" class="fa-solid fa-align-justify"></i>
+        <i color="white" class="fa-solid fa-scissors"></i>
+        <i color="white" class="fa-solid fa-magnifying-glass"></i>
+        <i id="link" color="white" class="fa-solid fa-link"></i>
+        <i id="image" color="white" class="fa-solid fa-image">
+          <input hidden type="file" id="filePicker">
+        </i>
+        <i color="white" class="fa-solid fa-video"></i>
+        <i class="fa-solid fa-pen"></i>
+        <div id="h1" class="flexIcons">
+          <i color="white" class="fa-solid fa-h"></i>
+          <i color="white" class="fa-solid fa-1"></i>
+        </div>
+
+        <div id="h2" class="flexIcons">
+          <i color="white" class="fa-solid fa-h"></i>
+          <i color="white" class="fa-solid fa-2"></i>
+        </div>
+      </div>
+      <div class="bg-form-color w-[30%] ml-[380px] hidden" id="linkModal">
+        <h1>Url:</h1>
+        <input class="bg-input-bg 
+        text-white p-3
+        items-center focus:text-white" value="" placeholder="Digite o Link" />
+        <div class="flex w-[100%] justify-between p-6">
+          <button class="border border-special-color-light text-special-color-light" id="cancelLinkButton">Cancel</button>
+          <button class="text-white bg-special-color-light" id="confirmLinkButton">Confirmar</button>
+        </div>
+      </div>
+      <div style="width: 100%; height: 500px; overflow-y: scroll;" id="output_div">
+
+      </div>
+    </div>
+    <div id="imageEditor" class="w-[20%] h-[550px]
+      border-2 border-white ml-5 hidden
+    ">
+      <h3 class="text-white text-xl ml-2">Image preview: </h3>
+      <img id="editing_image_preview" width="100%" height="100%" alt="image editing preview"> 
+    </div>
+  </div>
+{% endblock %}

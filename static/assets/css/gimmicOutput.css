@@ -1,0 +1,61 @@
+h1 {
+  color: white;
+  font-size: 24px;
+  width: 100%;
+}
+
+h2 {
+  color: white;
+  font-size: 20px;
+  width: 100%;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.textRight {
+  text-align: end;
+}
+
+.textLeft {
+  text-align: start;
+}
+
+
+
+.bold {
+  font-weight: bold;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+a {
+  display: flex;
+  width: 100%;
+  text-decoration: none;
+}
+
+a > i {
+  color: white;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.flexDivCenter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.flexDivLeft {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+}

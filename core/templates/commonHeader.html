@@ -10,13 +10,8 @@
 		<link rel="stylesheet" href="/static/assets/css/home.css">
 		<link href="{% static 'navbar.css' %}" rel="stylesheet" type="text/css">
 		{% tailwind_css %}
-		{% for style in additional_styles %}
-    	<link rel="stylesheet" href="/static/assets/css/{{style}}"></link>
-  	{% endfor %}
 	</head>
 	<body class="bg-bg">
-		{% include "sitealpha.html" %}
-		{% include 'navbarbase.html' %}
     {% block content %}
     {% endblock %}
 	</body>
@@ -27,8 +22,5 @@
 	<script type="text/javascript" src="/static/assets/javascript/region.js"></script>
   {% for script in additional_scripts %}
     <script type="text/javascript" src="{{script}}"></script>
-  {% endfor %}
-	{% for script in additional_intern_scripts %}
-    <script type="text/javascript" src="/static/assets/javascript/{{script}}"></script>
   {% endfor %}
 </html>

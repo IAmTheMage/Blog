@@ -1,10 +1,12 @@
 {% load static tailwind_tags %}
 <header>
-  <nav id="nav" class="z-0 container flex justify-between items-center py-4 px-8 border-b border-bg">
-    <div class="py-1 flex items-center">
-      <i style="color: #fff;" class=" text-5xl fa-solid fa-hat-wizard"></i>
-      <h1 class="sm:text-base text-2xl ml-3 text-base-color-light">Blog do Mago</h1>
-    </div>
+  <nav id="nav" class="container flex justify-between items-center py-4 px-8 border-b border-bg">
+    <a href="http://localhost:8000">
+      <div class="py-1 flex items-center">
+        <i style="color: #fff;" class=" text-5xl fa-solid fa-hat-wizard"></i>
+        <h1 class="sm:text-base text-2xl ml-3 text-base-color-light">Blog do Mago</h1>
+      </div>
+    </a>
     <ul class="md:flex text-xl hidden gap-10 items-center">
       {% for item in header %}
         <li class="hover:text-special-color-light 
@@ -28,12 +30,12 @@
         </a>
       </li>
       <li class="cursor-pointer">
-        <a target="_blank" href="https://www.instagram.com/01gustavogoncalves/">
-          <i class="headericon fa-brands fa-instagram"></i>
+        <a target="_blank" href="https://www.linkedin.com/in/gustavo-silva-2a9173193/">
+          <i class="headericon fa-brands fa-linkedin"></i>
         </a>
       </li>
       <li class="cursor-pointer">
-        <a target="_blank" href="https://github.com/IAmTheMage">
+        <a target="_blank" href="https://twitter.com/AZNOGLE1">
           <i class="headericon fa-brands fa-twitter"></i>
         </a>
       </li>

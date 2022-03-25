@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 import os
+import environ
 import mimetypes
 from threading import local
 
@@ -20,8 +21,14 @@ import django_heroku
 
 mimetypes.add_type("text/css", ".css", True)
 
+env = environ.Env(
+    Debug=(bool, False)
+)
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
 
 # Quick-start development settings - unsuitable for production
@@ -34,7 +41,7 @@ SECRET_KEY = 'django-insecure-nwxqw4y*3g7(if!ic0e24^)h6gfbxfc)w$_u(mkrgx55%_#v0_
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '366e-186-227-70-220.ngrok.io',
+    '8e0c-2804-1488-100-ab68-1147-9be1-d93e-787e.ngrok.io',
     'localhost',
     '127.0.0.1'
 ]
@@ -55,7 +62,8 @@ INSTALLED_APPS = [
     'theme',
     'django_browser_reload',
     'fontawesomefree',
-    'contact'
+    'contact',
+    'backend'
 ]
 
 MIDDLEWARE = [
@@ -71,11 +79,13 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'blog.urls'
 
+LOGIN_REDIRECT_URL = '/admin'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            
+            os.path.join(BASE_DIR, 'blog', 'templates'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -91,14 +101,17 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'blog.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': env('DB_ENGINE'),
+        'NAME': env('DB_NAME'),
+        'USER': env('DB_USER'),
+        'PASSWORD': env('DB_PASSWORD'),
+        'HOST': env('DB_HOST'),
+        'PORT': env('DB_PORT')
     }
 }
 
@@ -158,3 +171,11 @@ TAILWIND_APP_NAME = 'theme'
 NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
 
 django_heroku.settings(locals())
+
+
+EMAIL_BACKEND = env('EMAIL_BACKEND')
+EMAIL_HOST = env('EMAIL_HOST')
+EMAIL_PORT = env('EMAIL_PORT')
+EMAIL_USE_TLS = env('EMAIL_USE_TLS')
+EMAIL_HOST_USER = env('EMAIL_USER')
+EMAIL_HOST_PASSWORD = env('EMAIL_PASSWORD')
